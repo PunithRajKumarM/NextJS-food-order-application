@@ -7,7 +7,7 @@ export default async function handler(req, res) {
       .json({ message: "Couldn't able to perform get method" });
   }
   const { sessionEmail } = req.body;
-  console.log("session", sessionEmail);
+  // console.log("session", sessionEmail);
   const client = await connectToDatabase();
   const db = client.db();
   const collection = await db

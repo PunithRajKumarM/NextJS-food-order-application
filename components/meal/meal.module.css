@@ -50,3 +50,15 @@
   background-color: orange;
   border-radius: 10px;
 }
+
+.mealCartButtons {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mealCartButtons button{
+  padding: 0.25rem 1.5rem;
+}

@@ -1,7 +1,7 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import classes from "./authform.module.css";
 import { useRouter } from "next/router";
-import { signIn } from "next-auth/react";
+import { getSession, signIn } from "next-auth/react";
 
 async function createUser(email, password) {
   const response = await fetch("/api/auth/signup", {
@@ -23,11 +23,21 @@ async function createUser(email, password) {
 
 export default function AuthForm() {
   const [isLogin, setIsLogin] = useState(true);
-
+  const [isLoading, setIsLoading] = useState(true);
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
 
   const router = useRouter();
+
+  useEffect(() => {
+    getSession().then((session) => {
+      if (session) {
+        router.replace("/");
+      } else {
+        setIsLoading(true);
+      }
+    });
+  }, [router]);
 
   function switchAuthModeHandler() {
     setIsLogin((pre) => !pre);
@@ -53,14 +63,13 @@ export default function AuthForm() {
       });
 
       if (!result.error) {
-        //set some auth state
         router.replace("/");
       }
       // console.log(result);
     } else {
       try {
         const result = await createUser(enteredEmail, enteredPassword);
-        console.log("result of creating user : ", result);
+        // console.log("result of creating user : ", result);
         emailInputRef.current.value = "";
         passwordInputRef.current.value = "";
       } catch (error) {
@@ -68,7 +77,9 @@ export default function AuthForm() {
       }
     }
   }
-
+  if (isLoading) {
+    return <p className="loading">Loading...</p>;
+  }
   return (
     <div className={classes.auth}>
       <h2>{isLogin ? "Login" : "Signup"}</h2>

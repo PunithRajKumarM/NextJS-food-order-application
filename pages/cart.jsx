@@ -47,11 +47,15 @@ export default function CartPage() {
 
   return (
     <>
-      {userCart.length === 0 && <p>No cart yet added</p>}
+      {userCart.length === 0 && (
+        <p className="loading" style={{ padding: "2rem" }}>
+          No cart yet added
+        </p>
+      )}
       {userCart.length > 0 && (
-        <>
-          <h1>Total</h1>
-          <p>
+        <div className="cartPage">
+          <h2>Total</h2>
+          <p className="cartTotal">
             {currencyFormatter(
               userCart.reduce(
                 (totalPrice, product) =>
@@ -60,12 +64,12 @@ export default function CartPage() {
               )
             )}
           </p>
-          <div>
+          <div className="cartPadding">
             {userCart.map((item) => (
               <Cart key={item.id} item={item} />
             ))}
           </div>
-        </>
+        </div>
       )}
     </>
   );
