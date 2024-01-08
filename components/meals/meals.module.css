@@ -1,0 +1,44 @@
+.mealsPage {
+  padding: 2rem 0;
+}
+
+.mealsPage h1 {
+  text-align: center;
+  color: orange;
+}
+
+.mealsList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.meals {
+  width: 350px;
+  height: 450px;
+  box-shadow: 0 0 2px black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  gap: 1rem;
+}
+
+.meals h2 {
+  color: orange;
+}
+
+.mealsDescription {
+  color: indigo;
+}
+
+.mealsPrice {
+  color: forestgreen;
+}

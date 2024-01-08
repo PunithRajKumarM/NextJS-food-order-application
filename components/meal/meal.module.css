@@ -1,0 +1,52 @@
+.mealPage {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+.mealLeftSide,
+.mealRightSide {
+  /* width: 50%; */
+  flex-grow: 1;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.mealRightSide {
+  margin-top: 2rem;
+  /* align-self: self-start; */
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mealRightSide h1 {
+  color: orange;
+}
+
+.mealDescription {
+  color: indigo;
+}
+
+.mealPrice {
+  color: forestgreen;
+}
+
+.mealCart button {
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  color: white;
+  background-color: orange;
+  border-radius: 10px;
+}

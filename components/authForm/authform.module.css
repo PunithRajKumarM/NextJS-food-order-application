@@ -1,0 +1,32 @@
+.auth {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 5rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.authForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.authForm button {
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  background-color: orange;
+  color: white;
+  border-radius: 10px;
+}
+
+.swithAuth {
+  cursor: pointer;
+}

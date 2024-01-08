@@ -1,0 +1,41 @@
+.navbar {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+  justify-content: space-around;
+  align-items: center;
+  color: orange;
+  font-weight: 800;
+  font-size: large;
+}
+
+.navbar h1 a {
+  color: orange;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul li a {
+  color: indigo;
+  transition: all 0.2s linear;
+}
+
+.navbar ul li a:hover {
+  color: orange;
+}
+
+.navbarButton {
+  background-color: orange;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
