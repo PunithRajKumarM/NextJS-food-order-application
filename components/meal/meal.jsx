@@ -36,7 +36,7 @@ export default function MealDetail({ mealDetail, userMealQuantity }) {
 
       if (userData.ok) {
         const data = await userData.json();
-        console.log("data from removed item", data);
+        // console.log("data from removed item", data);
         if (data && data.quantity !== undefined) {
           setQuantity(data.quantity);
         }
@@ -67,7 +67,7 @@ export default function MealDetail({ mealDetail, userMealQuantity }) {
 
       if (userData.ok) {
         const data = await userData.json();
-        console.log("data", data);
+        // console.log("data", data);
         if (data && data.quantity !== undefined) {
           setQuantity(data.quantity);
         }

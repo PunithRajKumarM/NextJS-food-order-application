@@ -77,9 +77,9 @@ export default function AuthForm() {
       }
     }
   }
-  if (isLoading) {
-    return <p className="loading">Loading...</p>;
-  }
+  // if (isLoading) {
+  //   return <p className="loading">Loading...</p>;
+  // }
   return (
     <div className={classes.auth}>
       <h2>{isLogin ? "Login" : "Signup"}</h2>

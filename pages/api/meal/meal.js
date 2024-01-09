@@ -59,7 +59,7 @@ export default async function handler(req, res) {
       .collection("users")
       .findOne({ email: sessionEmail });
     const { cart } = collection;
-    console.log("meal cart checking", cart);
+    // console.log("meal cart checking", cart);
     res.status(201).json({
       message: "User updated successfully",
       cart: cart,

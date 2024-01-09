@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   const { sessionEmail, id } = req.body;
   let quantity;
   if (sessionEmail) {
-    console.log("session", sessionEmail);
+    // console.log("session", sessionEmail);
   }
   const client = await connectToDatabase();
   const db = client.db();
