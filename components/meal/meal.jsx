@@ -3,12 +3,15 @@ import Image from "next/image";
 import classes from "./meal.module.css";
 import { currencyFormatter } from "@/currencyFormatter/currencyFormatter";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 export default function MealDetail({ mealDetail, userMealQuantity }) {
   const { id, mealName, src, price, description } = mealDetail;
   const [cart, setCart] = useState();
   const [quantity, setQuantity] = useState(userMealQuantity);
   const { data: session } = useSession();
+
+  const router = useRouter();
 
   useEffect(() => {
     if (userMealQuantity !== undefined) {
@@ -40,6 +43,7 @@ export default function MealDetail({ mealDetail, userMealQuantity }) {
         if (data && data.quantity !== undefined) {
           setQuantity(data.quantity);
         }
+        // router.reload();
       }
     } else {
       console.error("User is not authenticated");
@@ -71,6 +75,7 @@ export default function MealDetail({ mealDetail, userMealQuantity }) {
         if (data && data.quantity !== undefined) {
           setQuantity(data.quantity);
         }
+        // router.reload();
       }
     } else {
       console.error("User is not authenticated");
