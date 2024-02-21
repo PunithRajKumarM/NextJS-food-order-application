@@ -9,6 +9,7 @@ export default function Navbar({ children }) {
   const loading = status === "loading";
 
   function logoutHandler() {
+    localStorage.removeItem("food-app-user");
     signOut();
   }
   return (
