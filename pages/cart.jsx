@@ -1,6 +1,7 @@
 import Cart from "@/components/cart/cart";
 import { currencyFormatter } from "@/currencyFormatter/currencyFormatter";
 import { useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
 export default function CartPage() {
@@ -8,10 +9,12 @@ export default function CartPage() {
   const loading = status === "loading";
   const [userCart, setUserCart] = useState([]);
   const [dataLoaded, setDataLoaded] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     if (session) {
       const sessionEmail = session.user.email;
+      console.log(sessionEmail);
       async function getData() {
         try {
           const response = await fetch("/api/cart/cart", {
@@ -29,7 +32,6 @@ export default function CartPage() {
           const data = await response.json();
           const { userData } = data;
           const userCartData = userData.cart;
-
           setUserCart(userCartData);
           setDataLoaded(true);
         } catch (error) {
@@ -41,18 +43,25 @@ export default function CartPage() {
     }
   }, [session]);
 
-  if (loading || !dataLoaded) {
+  useEffect(() => {
+    if (status === "loading") return;
+    if (!session) {
+      router.replace("/");
+    }
+  }, [session, router, status]);
+
+  if (session && (loading || !dataLoaded)) {
     return <p className="loading">Loading...</p>;
   }
 
   return (
     <>
-      {userCart.length === 0 && (
+      {session && userCart.length === 0 && (
         <p className="loading" style={{ padding: "2rem" }}>
           No cart yet added
         </p>
       )}
-      {userCart.length > 0 && (
+      {session && userCart.length > 0 && (
         <div className="cartPage">
           <h2>Total</h2>
           <p className="cartTotal">
