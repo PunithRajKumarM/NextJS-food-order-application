@@ -1,8 +1,9 @@
-![Screenshot (76)](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/67f0ab86-5bcf-4a22-9baf-34361665c4c0)
-![Screenshot (77)](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/234554fa-4a07-499e-bef9-df2027f6fba8)
-![Screenshot (78)](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/299bf11a-60f6-4b09-8b3d-15a9f3a5e5d9)
-![Meals](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/70881a5c-33b3-4ceb-b470-142a4ce4d6af)
-![Cart](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/a2d738dd-5258-49b3-97ba-ce886079f649)
+![FoodJS](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/6b842ead-1473-4896-9a20-c19597911bdb)
+![Sign-in-Google-Accounts](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/a5493f95-1733-4cca-81ba-4ce4beed5551)
+![FoodJS (1)](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/3dcb2f92-3c87-4e95-ba77-ca15e9123ff6)
+![Meals](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/315e32fd-73b3-41b9-8acc-9620936043fe)
+![Cart](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/e2fb3e65-ef35-4d92-9228-9f6567484d2b)
+
 
 
 
