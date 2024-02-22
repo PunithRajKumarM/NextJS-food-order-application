@@ -1,3 +1,12 @@
+![Screenshot (76)](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/67f0ab86-5bcf-4a22-9baf-34361665c4c0)
+![Screenshot (77)](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/234554fa-4a07-499e-bef9-df2027f6fba8)
+![Screenshot (78)](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/299bf11a-60f6-4b09-8b3d-15a9f3a5e5d9)
+![Meals](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/70881a5c-33b3-4ceb-b470-142a4ce4d6af)
+![Cart](https://github.com/PunithRajKumarM/NextJS-food-order-application/assets/146944110/a2d738dd-5258-49b3-97ba-ce886079f649)
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
